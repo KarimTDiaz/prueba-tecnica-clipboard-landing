@@ -1,1 +1,40 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../config/variables.scss' as *;
+.buttons{
+    @include flexbox (flex,column,nowrap,center,center);
+    padding-top: 2rem;
+
+    @include responsive (laptop){
+        @include flexbox (flex,row,nowrap,center,center);
+        gap: 10px;
+    }
+}
+
+.button{
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1rem 0rem;
+    border-radius: 5rem;
+
+    font-family: var(--primary-font);
+    color: var(--white-text);
+    &--ios{
+        background-color: var(--primary-color);
+        @include hover{
+            &:hover  {
+                  background-color: lighten($primary-color, 10);
+                }
+            }
+    }
+    &--mac{
+        background-color: var(--secondary-color);
+        @include hover{
+        &:hover  {
+              background-color: lighten($secondary-color, 10);
+            }
+        }
+    }
+}
 

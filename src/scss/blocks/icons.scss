@@ -1,0 +1,14 @@
+@use '../mixins/hover.scss' as*;
+
+.icon{
+    &--list{
+        height: 32px;
+    }
+    &--socials{
+        @include hover{
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+    }
+}

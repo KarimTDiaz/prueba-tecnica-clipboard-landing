@@ -1,0 +1,26 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+.article{
+    padding:0rem 2rem;
+    margin-bottom: 10rem;
+    &__head{
+        margin-bottom:5rem ;
+    }
+    @include responsive(laptop){
+        &__head{
+            padding: 0rem 22rem;
+        }
+        &--snippets{
+            padding-left: 0
+        }
+
+    }
+}
+
+.two-columns{
+    @include responsive(laptop){
+        @include flexbox(flex,row,nowrap,space-between,center);
+        gap: 10rem;
+        padding-left: 0;
+}
+}

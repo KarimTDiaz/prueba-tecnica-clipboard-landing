@@ -1,0 +1,46 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+
+.list{
+    @include responsive(laptop){
+        text-align: left;
+        &--supercharge{
+            @include flexbox(flex,row,nowrap,center,center);
+            gap: 5rem;
+        }
+        &--footer{
+            display: grid;
+            grid-template-columns: repeat( 3, 1fr);
+            column-gap: 3rem;
+        }
+    }
+    &__item{
+        margin: 0;
+        &--snippets{
+            margin-bottom: 3rem;
+        }
+        &--supercharge{
+            @include flexbox(flex,column,nowrap,center,center);
+            width: 20rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+            &-list{
+                padding-top: 1.8rem;
+            }
+        }
+        &--footer{
+            margin-bottom: 1.5rem;
+            color: var(--black-text);
+            @include hover{
+                &:hover{
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+    &__link{
+        font-family: var(--primary-font);
+    }
+}

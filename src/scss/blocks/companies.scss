@@ -1,0 +1,11 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+
+.companies{
+    @include flexbox(flex,column,nowrap, center,center);
+    gap: 5rem;
+    @include responsive(laptop){
+        @include flexbox(flex,row,nowrap, center,center);
+        gap: 7rem;
+    }
+}

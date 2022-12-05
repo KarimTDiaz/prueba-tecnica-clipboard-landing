@@ -360,4 +360,246 @@ a {
   color: inherit;
 }
 
-/* ESTILOS DEL FOOTER */
+:root {
+  --primary-color:hsl(171, 66%, 44%);
+  --secondary-color: hsl(233, 100%, 69%);
+  --footer:hsl(210, 7%, 89%);
+  --black-text:hsl(210, 10%, 33%);
+  --grey-text:hsl(201, 11%, 66%);
+  --white-text:hsl(0, 0%, 100%);
+  --primary-font:"Bai Jamjuree", sans-serif;
+}
+
+body {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.title {
+  font-family: var(--primary-font);
+  color: var(--black-text);
+}
+
+.text {
+  font-family: var(--primary-font);
+  line-height: 1.8rem;
+  color: var(--grey-text);
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.button {
+  margin-bottom: 1rem;
+  width: 20rem;
+  padding: 1rem 0rem;
+  border-radius: 5rem;
+  font-family: var(--primary-font);
+  color: var(--white-text);
+}
+.button--ios {
+  background-color: var(--primary-color);
+}
+@media (hover: hover) {
+  .button--ios:hover {
+    background-color: #3cd7c0;
+  }
+}
+.button--mac {
+  background-color: var(--secondary-color);
+}
+@media (hover: hover) {
+  .button--mac:hover {
+    background-color: #94a0ff;
+  }
+}
+
+.logo {
+  margin-bottom: 3rem;
+}
+.logo--footer {
+  width: 50px;
+  padding-top: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .logo--footer {
+    margin-left: 7rem;
+  }
+}
+
+.article {
+  padding: 0rem 2rem;
+  margin-bottom: 10rem;
+}
+.article__head {
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .article__head {
+    padding: 0rem 22rem;
+  }
+  .article--snippets {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .two-columns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    padding-left: 0;
+  }
+}
+
+.companies {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+@media screen and (min-width: 1024px) {
+  .companies {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.5rem;
+  color: var(--black-text);
+}
+@media screen and (min-width: 1024px) {
+  .socials {
+    margin-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .list {
+    text-align: left;
+  }
+  .list--supercharge {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+  .list--footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+  }
+}
+.list__item {
+  margin: 0;
+}
+.list__item--snippets {
+  margin-bottom: 3rem;
+}
+.list__item--supercharge {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.list__item--supercharge-list {
+  padding-top: 1.8rem;
+}
+.list__item--footer {
+  margin-bottom: 1.5rem;
+  color: var(--black-text);
+}
+@media (hover: hover) {
+  .list__item--footer:hover {
+    color: var(--primary-color);
+  }
+}
+.list__link {
+  font-family: var(--primary-font);
+}
+
+.image--imac {
+  margin-bottom: 5rem;
+}
+.image--devices {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon--list {
+  height: 32px;
+}
+@media (hover: hover) {
+  .icon--socials:hover {
+    color: var(--primary-color);
+  }
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 0.9rem;
+  text-align: center;
+  background-image: url("../assets/images/bg-header-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 8rem 25rem;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0rem;
+  background-color: var(--footer);
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0rem;
+  }
+}

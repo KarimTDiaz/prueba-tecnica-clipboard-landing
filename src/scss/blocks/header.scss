@@ -1,1 +1,17 @@
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as*;
+@use '../functions/image.scss' as*;
 
+.header{
+    @include flexbox(flex,column,nowrap,center,center);
+    padding: 8rem 0.9rem;
+    text-align: center;
+    background-image: image('bg-header-mobile.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include responsive(laptop){
+        padding: 8rem 25rem;
+    }
+}

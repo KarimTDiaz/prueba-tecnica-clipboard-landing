@@ -1,1 +1,6 @@
+@use '../mixins/responsive.scss' as*;
 
+.title{
+    font-family: var(--primary-font);
+    color: var(--black-text);
+}

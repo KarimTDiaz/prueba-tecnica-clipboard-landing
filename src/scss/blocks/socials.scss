@@ -1,0 +1,13 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/responsive.scss' as*;
+@use '../mixins/hover.scss' as*;
+
+.socials{
+    @include flexbox(flex,row,nowrap,center,center);
+    gap: 2rem;
+    font-size: 1.5rem;
+    color: var(--black-text);
+    @include responsive(laptop){
+        margin-right: 5rem;
+    }
+}
